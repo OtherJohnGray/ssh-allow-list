@@ -27,9 +27,9 @@ def allowed?(cmd)
     Regexp.new("^zfs get -H syncoid:sync '#{dataset_pattern_string}'$"),
     Regexp.new("^zfs get -Hpd 1 -t snapshot guid,creation '#{dataset_pattern_string}'$"),
     Regexp.new("^zfs get -Hpd 1 -t bookmark guid,creation '#{dataset_pattern_string}'$"),
-    Regexp.new("^zfs send -w -nP (-I '#{snapshot_pattern_string}' )?'#{snapshot_pattern_string}'$"),
+    Regexp.new("^zfs send -w -nv?P (-I '#{snapshot_pattern_string}' )?'#{snapshot_pattern_string}'$"),
     Regexp.new("^ zfs send -w  (-I '#{snapshot_pattern_string}' )?'#{snapshot_pattern_string}' \\| lzop  \\| mbuffer  -q -s 128k -m 16M 2>/dev/null$"),
-    Regexp.new("^zfs send -nP -t [0-9a-f\-]+$"),
+    Regexp.new("^zfs send -nv?P -t [0-9a-f\-]+$"),
     Regexp.new("^ zfs send -w  -t [0-9a-f\\-]+ \\| lzop  \\| mbuffer  -q -s 128k -m 16M 2>/dev/null$"),
   ]
   ####################################################
