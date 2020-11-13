@@ -5,6 +5,10 @@ The allowed commands can be configured by editing the strings and patterns in th
 
 The script logs both allowed and rejected commands, so that you can use trial and error to identify what commands third party utilities might be generating on your behalf.
 
+# Prerequisites
+
+\*nix type operating system (this was tested on Ubuntu 20.04) with an ssh server and a recent version of [Ruby](https://www.ruby-lang.org/en/).
+
 # Usage
 
 1. copy the ssh-allow-list.sh script to somewhere secure on the server that can still be read by unprivileged users, like /usr/local/bin
