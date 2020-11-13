@@ -11,7 +11,7 @@ The script logs both allowed and rejected commands, so that you can use trial an
 
 # Usage
 
-1. copy the ssh-allow-list.sh script to somewhere secure on the server that can still be read by unprivileged users, like /usr/local/bin
+1. copy the [ssh-allow-list.sh script](https://github.com/human-capitalist/ssh-allow-list/blob/main/ssh-allow-list.sh) to somewhere secure on the server that can still be read by unprivileged users, like /usr/local/bin
 
 2. you might end up wanting to have different versions of this script for different users or tasks, so change the name of the script to something meaningful. For example I use this script to control ZFS send commands issued by an unprivileged backupuser, so I renamed the script to /usr/local/bin/wrap-zfs-send
 
