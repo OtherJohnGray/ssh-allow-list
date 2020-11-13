@@ -1,7 +1,7 @@
 # ssh-allow-list
 Safely allow non-root SSH users to run privileged sudo or otherwise privileged commands (like ZFS send) by requiring command to match a fixed list of strings and regexes
 
-The allowed commands can be configured by editing the strings and patterns in the script. As provided, it is set up to allow a sensible set of commands for secure remote backup of encrypted ZFS filesystems by the current version of [Jim Salter's Sanoid and Syncoid utilities](https://github.com/jimsalterjrs/sanoid/) (although you would still need to change your pool and dataset names).
+The allowed commands can be configured by editing the strings and patterns in the script. As provided, it is set up to allow a sensible set of commands for secure remote backup of encrypted ZFS filesystems by the current version of [Jim Salter's excellent Sanoid and Syncoid utilities](https://github.com/jimsalterjrs/sanoid/) (although you would still need to change your pool and dataset names).
 
 The script logs both allowed and rejected commands, so that you can use trial and error to identify what commands third party utilities might be generating on your behalf.
 
