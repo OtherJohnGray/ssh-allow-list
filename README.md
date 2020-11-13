@@ -15,9 +15,9 @@ The script logs both allowed and rejected commands, so that you can use trial an
 
 4. Set the unprivileged user's password to something random and then forget it, optionally also block this user from using password login in your sshd config. You don't ever want anyone logging in as this user via a password.
 
-5. Put the user's public SSH key in their /home/username/.ssh/authorized_keys file, and use the command= syntax to make sure that when they log in, the ssh-allow-list script is run instead of their receiving a login. The script will then figure out what command they submitted as part of the ssh connection, validate it, and run it if it is legit:
+5. Put the user's public SSH key in their /home/username/.ssh/authorized_keys file, and use the command= syntax to make sure that when they log in, the ssh-allow-list script is run instead of their receiving a login. The script will then figure out what command they submitted as part of the ssh connection, validate it, and run it if it is legit, e.g.:
 
-    command="/usr/local/bin/wrap-zfs-send",restrict ssh-ed25519 AA....NB4 backupuser@backupserver
+    **command="/usr/local/bin/wrap-zfs-send",restrict ssh-ed25519 AA....NB4 backupuser@backupserver**
 
 
 6. Give the user the sudo permission (or ZFS permissions or whatever) that will be needed for the commands they will be submitting to run successfully.
